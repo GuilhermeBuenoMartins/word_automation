@@ -5,6 +5,7 @@ from log import Log
 from datetime import datetime
 from pywinauto.application import Application
 
+
 Log.open()
 
 #Here starting the automation
@@ -30,8 +31,12 @@ word.child_window(title="Salvar", control_type="Button").click()
 word.child_window(title="Área de Trabalho", control_type="Button").click()
 
 #Encontrando a janela Salvar Como
-word.child_window(title="Nome do arquivo:", auto_id="1001", control_type="Edit").set_text(dateExecution)
+#word.child_window(title="Nome do arquivo:", auto_id="1001", control_type="Edit").set_text(dateExecution)
 word.child_window(title="Salvar", auto_id="1", control_type="Button").click()
+
+#word.close()
 Log.print('>>>The execution FINISHES HERE!\n\n')
+
 Log.close()
-exit()
+exit()  
+    

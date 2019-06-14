@@ -12,10 +12,7 @@ from pywinauto import actionlogger
 
 
 class Log:
-	
-	def __init__(self):
-		self.logger = logging.getLogger(__name__)
-	
+
 	#Method of opening log.
 	def open():
 		try:
@@ -37,21 +34,19 @@ class Log:
 		actionlogger.enable()
 
 
-
 	#Method of standard input into the log
 	def input(string):
 		value = input(string)
-		#self.logger.info(string + value)
+		logging.info(string + value)
 		return value
 
 	#Method of standard output into the log
 	def print(string):
-		logger.info(string)
+		logging.info(string)
 		print(string)
 
 	#Method of closing log.
 	def close():
-		#actionlogger.disable()
-		logger.close()
+		actionlogger.disable()
 
 
